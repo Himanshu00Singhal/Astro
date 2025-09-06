@@ -57,3 +57,24 @@ curl -X POST http://localhost:8000/generate-insight \
     "language": "en"
   }'
 ```
+## Brief writeup
+```bash
+Technical Decisions & Design Choices
+1. Zodiac Calculation Logic
+
+Approach: Date-based Western astrology system
+Rationale: Simplified, deterministic calculation that's easy to validate
+Future: Can be extended with Vedic astrology and precise astronomical calculations
+
+2. Insight Generation
+
+Current: Template-based system with trait selection
+Personalization: Uses name hash + birth time for pseudo-randomization
+LLM Horoscope: Added Groq running on qwen (open source), Easy to replace with other LLM API calls (OpenAI, HuggingFace)
+
+3. Caching Strategy
+
+Implementation: In-memory dictionary with MD5 key generation
+Key: Combines name, birth date, current date, and language
+Benefits: Prevents redundant calculations, improves performance
+```
