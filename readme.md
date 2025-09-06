@@ -1,43 +1,52 @@
+# Astro
 
+A simple astrology application with both a **Streamlit UI** and **REST API** interface.
+
+## Project Structure
+```bash
 Astro Folder
 
+├── astro_main.py # Main Streamlit application
 
-├── astro_main.py            # Main Streamlit application
+├── api_server.py # REST API server
 
-├── api_server.py            # REST API server
+├── requirements.txt # Python dependencies
 
-├── requirements.txt         # Python dependencies
+├── README.md # This file
 
-├── README.md               # This file
+└── config.yaml # Configuration file
+```
 
-└── config.yaml             # Configuration file
+## Quick Start
 
-----------------------------------------------------
-Quick Start
-----------------------------------------------------
-Option 1: 
+### Option 1: Streamlit UI (Recommended)
 
-Streamlit UI (Recommended)
+1. **Install dependencies:**
 
-Install Dependencies:
+```bash
 pip install -r requirements.txt
+```
+2. **Run the Streamlit app:**
 
-Run the Streamlit App:
+```bash
 streamlit run astro_main.py
+```
 
-Open in Browser:
-Navigate to http://localhost:8501
-------------------------------------------------------
-Option 2:
-REST API
-
-Install Additional Dependencies:
+3. **Open in browser:**
+```bash
+Navigate to: http://localhost:8501
+```
+### Option 2: REST API
+1. **Install additional dependencies:**
+```bash
 pip install flask
-
-Run the API Server:
+```
+2. **Run the API server:**
+```bash
 python api_server.py
-
-Test the API:
+```
+3. **Test the API:**
+```bash
 curl -X POST http://localhost:8000/generate-insight \
   -H "Content-Type: application/json" \
   -d '{
@@ -47,3 +56,4 @@ curl -X POST http://localhost:8000/generate-insight \
     "birth_place": "Jaipur, India",
     "language": "en"
   }'
+```
