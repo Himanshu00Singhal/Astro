@@ -1,4 +1,4 @@
-# this is api_server.py
+
 from flask import Flask, request, jsonify
 from datetime import datetime, date, time
 import json
@@ -10,7 +10,6 @@ from langchain_groq import ChatGroq
 from langchain.chains import LLMChain
 from astro_main import AstrologicalService, BirthDetails, Language, generate_horoscope
 
-# Load config for API key
 with open("config.yaml", "r") as f:
     config = yaml.safe_load(f)
 
