@@ -1,11 +1,17 @@
-Astro
+
+Astro Folder
 
 
-├── astro_main.py          # Main Streamlit application
-├── api_server.py          # REST API server
-├── requirements.txt       # Python dependencies
-├── README.md             # This file
-└── config.yaml           # Configuration file
+├── astro_main.py            # Main Streamlit application
+
+├── api_server.py            # REST API server
+
+├── requirements.txt         # Python dependencies
+
+├── README.md               # This file
+
+└── config.yaml             # Configuration file
+
 ----------------------------------------------------
 Quick Start
 ----------------------------------------------------
