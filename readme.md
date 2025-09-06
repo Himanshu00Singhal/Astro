@@ -1,4 +1,6 @@
 Astro
+
+
 ├── astro_main.py          # Main Streamlit application
 ├── api_server.py          # REST API server
 ├── requirements.txt       # Python dependencies
